@@ -1,24 +1,15 @@
 # Replace 'yourdomain.com' with your actual custom domain
-# Examples:
-# - yourdomain.com (for apex domain)
-# - docs.yourdomain.com (for subdomain)
+# Examples: mydocs.com or docs.mydomain.com
 # 
-# After setting your domain here, configure your DNS settings:
+# IMPORTANT: Remove all comments and only keep your domain name
+# For example, if your domain is 'mydocs.com', this file should only contain:
+# mydocs.com
 # 
-# For apex domain (yourdomain.com):
-#   Type: A
-#   Host: @
-#   Value: 185.199.108.153
-#   Value: 185.199.109.153
-#   Value: 185.199.110.153
-#   Value: 185.199.111.153
+# After setting your domain, configure DNS:
+# - Apex domain: Add 4 A records pointing to GitHub's IPs (see GITHUB_PAGES_SETUP.md)
+# - Subdomain: Add CNAME record pointing to Eswar797.github.io
 # 
-# For subdomain (docs.yourdomain.com):
-#   Type: CNAME
-#   Host: docs
-#   Value: YOUR_USERNAME.github.io
-# 
-# Then enable GitHub Pages in repository settings and set custom domain.
+# Then in repository Settings → Pages, enable custom domain.
 
 yourdomain.com
 
