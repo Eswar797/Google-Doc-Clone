@@ -1,0 +1,149 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  min-height: 56px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #5f6368;
+  transition: background-color 0.2s;
+}
+
+.menu-button:hover {
+  background-color: rgba(60, 64, 67, 0.08);
+}
+
+.document-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.document-title {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  color: #202124;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  max-width: 600px;
+}
+
+.document-title:hover {
+  background-color: rgba(60, 64, 67, 0.08);
+}
+
+.document-title:focus {
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(66, 133, 244, 0.5);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.editor-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.rich-text-editor {
+  min-height: 100%;
+  padding: 48px 96px;
+  max-width: 816px;
+  margin: 0 auto;
+  outline: none;
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #202124;
+}
+
+.rich-text-editor:focus {
+  outline: none;
+}
+
+.rich-text-editor p,
+.rich-text-editor div {
+  margin: 0 0 12px 0;
+}
+
+.rich-text-editor h1 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 20px 0 16px 0;
+}
+
+.rich-text-editor h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 18px 0 12px 0;
+}
+
+.rich-text-editor ul,
+.rich-text-editor ol {
+  margin: 12px 0;
+  padding-left: 32px;
+}
+
+.rich-text-editor li {
+  margin: 4px 0;
+}
+
+@media (max-width: 1024px) {
+  .rich-text-editor {
+    padding: 32px 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rich-text-editor {
+    padding: 24px;
+  }
+  
+  .document-title {
+    max-width: 200px;
+    font-size: 16px;
+  }
+}
+
